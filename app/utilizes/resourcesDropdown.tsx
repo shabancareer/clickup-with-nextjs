@@ -45,12 +45,12 @@ import Downloads from "@/components/ui/Downloads";
 
 // import "./globals.css";
 
-export default function resourcesDropdown() {
+export default function ResourcesDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button className="hover:bg-gray-100">
-          Product
+          Resources
           <ExpandMoreIcon />
         </Button>
       </DropdownMenuTrigger>

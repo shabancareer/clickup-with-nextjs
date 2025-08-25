@@ -43,15 +43,14 @@ import Integrations from "@/components/ui/Integrations";
 import WatchDemo from "@/components/ui/WatchDemo";
 import Downloads from "@/components/ui/Downloads";
 
-
 // import "./globals.css";
 
-export default function solutionsDropdown() {
+export default function SolutionsDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button className="hover:bg-gray-100">
-          Product
+          Solutions
           <ExpandMoreIcon />
         </Button>
       </DropdownMenuTrigger>

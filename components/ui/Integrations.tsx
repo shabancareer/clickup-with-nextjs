@@ -83,8 +83,8 @@ const Integrations = () => (
         y2="7.0026"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.176" stop-color="#0052CC"></stop>
-        <stop offset="1" stop-color="#2684FF"></stop>
+        <stop offset="0.176" stopColor="#0052CC"></stop>
+        <stop offset="1" stopColor="#2684FF"></stop>
       </linearGradient>
       <linearGradient
         id="paint1_linear_743_15721"
@@ -94,8 +94,8 @@ const Integrations = () => (
         y2="9.68897"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.176" stop-color="#0052CC"></stop>
-        <stop offset="1" stop-color="#2684FF"></stop>
+        <stop offset="0.176" stopColor="#0052CC"></stop>
+        <stop offset="1" stopColor="#2684FF"></stop>
       </linearGradient>
     </defs>
   </svg>

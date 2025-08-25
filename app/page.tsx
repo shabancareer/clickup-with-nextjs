@@ -3,6 +3,9 @@ import logo from "../public/assets/logo.svg";
 import styles from "./page.module.css";
 import Link from "next/link";
 import ProductDropdown from "./utilizes/productDropdown";
+import SolutionsDropdown from "./utilizes/solutionsDropdown"
+import ResourcesDropdown from "./utilizes/resourcesDropdown";
+
 
 export default function Home() {
   return (
@@ -23,10 +26,11 @@ export default function Home() {
       </div>
       <div className="navItems justify-around">
         <ProductDropdown />
+        <SolutionsDropdown />
+        <ResourcesDropdown />
         <h1>Shaban</h1>
         <h1>Shaban</h1>
-        <h1>Shaban</h1>
-        <h1>Shaban</h1>
+        
       </div>
       <div className="bg-yellow-300 navItems">
         <h1>Shaban</h1>
