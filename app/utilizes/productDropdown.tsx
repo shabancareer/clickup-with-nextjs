@@ -43,7 +43,6 @@ import Integrations from "@/components/ui/Integrations";
 import WatchDemo from "@/components/ui/WatchDemo";
 import Downloads from "@/components/ui/Downloads";
 
-
 // import "./globals.css";
 
 export default function ProductDropdown() {
@@ -64,69 +63,77 @@ export default function ProductDropdown() {
             AI Features
             <Divider />
           </DropdownMenuLabel>
-          <DropdownMenuItem >
-            <div className="flex justify-evenly my-2">
-              <Image
-                src={brain}
-                alt="Product brain"
-                priority
-                className="h-10 w-auto"
-              />
-              <span className="ml-2">
-                <p className="font-medium">Brain</p>
-                <p>The complete work AI platform</p>
-              </span>
-            </div>
+          <DropdownMenuItem>
+            <Link href="/brain">
+              <div className="flex justify-evenly my-2">
+                <Image
+                  src={brain}
+                  alt="Product brain"
+                  priority
+                  className="h-10 w-auto"
+                />
+                <span className="ml-2">
+                  <p className="font-medium">Brain</p>
+                  <p>The complete work AI platform</p>
+                </span>
+              </div>
+            </Link>
           </DropdownMenuItem>
           <Divider />
           <DropdownMenuItem>
-            <div className="flex justify-evenly my-2">
-              <Image
-                src={brain}
-                alt="Product brain"
-                priority
-                className="h-10 w-auto"
-              />
-              <span className="ml-2">
-                <p className="font-medium">
-                  Brain{" "}
-                  <span className="bg-amber-600 p-1 relative bottom-2 left-0.5 italic">
-                    MAX
-                  </span>
-                </p>
-                <p>One AI App to rule them all</p>
-              </span>
-            </div>
+            <Link href="/brain/max">
+              <div className="flex justify-evenly my-2">
+                <Image
+                  src={brain}
+                  alt="Product brain"
+                  priority
+                  className="h-10 w-auto"
+                />
+                <span className="ml-2">
+                  <p className="font-medium">
+                    Brain{" "}
+                    <span className="bg-amber-600 p-1 relative bottom-2 left-0.5 italic">
+                      MAX
+                    </span>
+                  </p>
+                  <p>One AI App to rule them all</p>
+                </span>
+              </div>
+            </Link>
           </DropdownMenuItem>
           <Divider />
           <DropdownMenuItem>
-            <div className="flex justify-evenly my-2">
-              <Image
-                src={search}
-                alt="Product brain"
-                priority
-                className="h-10 w-auto"
-              />
-              <span className="ml-2">
-                <p className="font-medium">Enterprise Search</p>
-                <p>One search for all your work</p>
-              </span>
-            </div>
+            <Link href="/brain/enterprise-search">
+              <div className="flex justify-evenly my-2">
+                <Image
+                  src={search}
+                  alt="Product brain"
+                  priority
+                  className="h-10 w-auto"
+                />
+                <span className="ml-2">
+                  <p className="font-medium">Enterprise Search</p>
+                  <p>One search for all your work</p>
+                </span>
+              </div>
+            </Link>
           </DropdownMenuItem>
           <Divider />
           <DropdownMenuItem>
-            <div className="flex justify-evenly my-2">
-              <Image
-                src={agent}
-                alt="Product brain"
-                priority
-                className="h-10 w-auto"
-              />
-              <span className="ml-2">
-                <p className="font-medium">AI Notetaker</p>
-                <p>Connect call notes to your network.</p>
-              </span>
-            </div>
+            <Link href="brain/ai-notetaker">
+              <div className="flex justify-evenly my-2">
+                <Image
+                  src={agent}
+                  alt="Product brain"
+                  priority
+                  className="h-10 w-auto"
+                />
+                <span className="ml-2">
+                  <p className="font-medium">AI Notetaker</p>
+                  <p>Connect call notes to your network.</p>
+                </span>
+              </div>
+            </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuGroup className="grid grid-cols-2">
@@ -135,25 +142,34 @@ export default function ProductDropdown() {
               Projects
             </DropdownMenuLabel>
             <DropdownMenuItem className="items-center">
-              <Link href="" className="flex items-center gap-2">
+              <Link href="/features/tasks" className="flex items-center gap-2">
                 <Image src={tasks} alt="Tasks" />
                 <span>Tasks</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="/features/dashboards"
+                className="flex items-center gap-2"
+              >
                 <Image src={dashboards} alt="dashboards" />
                 <span>Dashboards</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="/features/kanban-board"
+                className="flex items-center gap-2"
+              >
                 <Image src={board} alt="board-view" />
                 <span>Board</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="/features/gantt-chart-view"
+                className="flex items-center gap-2"
+              >
                 <Image src={gantt} alt="gantt" />
                 <span>Gantt</span>
               </Link>
@@ -164,25 +180,31 @@ export default function ProductDropdown() {
               knowledge
             </DropdownMenuLabel>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link href="features/docs" className="flex items-center gap-2">
                 <Image src={doc} alt="Doc" />
                 <span>Doc</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="features/whiteboards"
+                className="flex items-center gap-2"
+              >
                 <Image src={whiteboards} alt="Whiteboards" />
                 <span>Whiteboards</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="features/knowledge-management"
+                className="flex items-center gap-2"
+              >
                 <Image src={wiki} alt="Wiki" />
                 <span>Wiki</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link href="features/forms" className="flex items-center gap-2">
                 <Image src={forms} alt="Forms" />
                 <span>Forms</span>
               </Link>
@@ -193,25 +215,28 @@ export default function ProductDropdown() {
               Communication
             </DropdownMenuLabel>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link href="/features/chat" className="flex items-center gap-2">
                 <Image src={chat} alt="Chat" />
                 <span>Chat</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="/features/sync-up"
+                className="flex items-center gap-2"
+              >
                 <Image src={syncup} alt="Syncup" />
                 <span>Syncup</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link href="/features/inbox" className="flex items-center gap-2">
                 <Image src={inbox} alt="Inbox" />
                 <span>Inbox</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link href="/features/clips" className="flex items-center gap-2">
                 <Image src={clips} alt="Clips" />
                 <span>Clips</span>
               </Link>
@@ -222,25 +247,37 @@ export default function ProductDropdown() {
               Time
             </DropdownMenuLabel>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="/features/calendar"
+                className="flex items-center gap-2"
+              >
                 <Image src={calendar} alt="calendar" />
                 <span>Calendar</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="/features/time-estimates"
+                className="flex items-center gap-2"
+              >
                 <Image src={scheduling} alt="scheduling" />
                 <span>Scheduling</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="features/automations"
+                className="flex items-center gap-2"
+              >
                 <Image src={automations} alt="automations" />
                 <span>Automations</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="" className="flex items-center gap-2">
+              <Link
+                href="features/project-time-tracking"
+                className="flex items-center gap-2"
+              >
                 <Image src={timeTracking} alt="timeTracking" />
                 <span>Time tracking</span>
               </Link>
@@ -249,41 +286,52 @@ export default function ProductDropdown() {
         </DropdownMenuGroup>
         <DropdownMenuGroup className="flex flex-col h-auto">
           <div className="flex flex-col flex-1">
-             <DropdownMenuLabel className="aiRightDropdown flex pt-2 ml-1">
-            <StarIcon />
-            <span className="ml-1 text-black">NEW</span>
-          </DropdownMenuLabel>
-          <DropdownMenuItem className="flex-col aiFeatures">
-            <div >
-              <h4 className="font-bold">Talk to Text</h4>
-            </div>
-            <div className="flex-1 flex flex-col justify-between pt-14">
-            <p className="overflow-x-auto tracking-wide">
-              Instantly convert your voice to text, across any <br />desktop app, doc,
-              or site. 
-            </p>
-            <span className="pt-6 font-bold text-gray-500 text-sm leading-6">
-            <Link href="">
-            Learn More <ArrowRightAltIcon />
-            </Link>
-            </span> 
-            </div>
-          </DropdownMenuItem>
+            <DropdownMenuLabel className="aiRightDropdown flex pt-2 ml-1">
+              <StarIcon />
+              <span className="ml-1 text-black">NEW</span>
+            </DropdownMenuLabel>
+            <DropdownMenuItem className="flex-col aiFeatures">
+              <Link href="/brain/talk-to-text">
+                <div>
+                  <h4 className="font-bold">Talk to Text</h4>
+                </div>
+                <div className="flex-1 flex flex-col justify-between pt-14">
+                  <p className="overflow-x-auto tracking-wide">
+                    Instantly convert your voice to text, across any <br />
+                    desktop app, doc, or site.
+                  </p>
+                  <span className="pt-6 font-bold text-gray-500 text-sm leading-6">
+                    Learn More <ArrowRightAltIcon />
+                  </span>
+                </div>
+              </Link>
+            </DropdownMenuItem>
           </div>
-         
           <div className="grid grid-cols-2 flex-1 border-t-2">
-            <DropdownMenuItem className="border-r flex flex-col items-center justify-center">
-              <AllFeaturesIcons />
-              <span>All Features</span> </DropdownMenuItem>
+            <DropdownMenuItem className="border-r flex justify-center">
+              <Link href="/features" className="flex flex-col items-center">
+                <AllFeaturesIcons />
+                <span>All Features</span>
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuItem className="flex flex-col items-center justify-center">
-              <Integrations />
-             <span>Integrations</span> </DropdownMenuItem>
+              <Link href="integrations" className="flex flex-col items-center justify-center">
+                <Integrations />
+                <span>Integrations</span>{" "}
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuItem className="border-r border-t flex flex-col items-center justify-center">
-              <WatchDemo />
-             <span>Watch demo</span> </DropdownMenuItem>
+              <Link href="on-demand-demo" className="flex flex-col items-center justify-center">
+                <WatchDemo />
+                <span>Watch demo</span>{" "}
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuItem className="border-t flex flex-col items-center justify-center">
-              <Downloads />
-              <span>Downloads</span> </DropdownMenuItem>
+              <Link href="on-demand-demo" className="flex flex-col items-center justify-center">
+                <Downloads />
+                <span>Downloads</span>{" "}
+              </Link>
+            </DropdownMenuItem>
           </div>
         </DropdownMenuGroup>
       </DropdownMenuContent>
