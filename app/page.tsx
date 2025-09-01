@@ -58,26 +58,26 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <main className="CuHome_mainWrapper__QDbpa bg-amber-100">
-        <div className="CuHome_mainContent__xfnhR flex justify-around items-center bg-green-600">
-          <div className="bg-amber-300 w-full mx-auto justify-center">
-            <h1 className="font-extrabold text-4xl leading-[40px]">
+      <main className="CuHome_mainWrapper__QDbpa">
+        <div className="CuHome_mainContent__xfnhR h-[60vh] flex justify-around items-center">
+          <div className="flex flex-col items-center space-y-5">
+            <h1 className="font-extrabold text-7xl tracking-[-2px] leading-[76px]">
               The everything app, for work.
             </h1>
-            <div className="">
-              <p className="font-medium">
+            <div className="max-w-[560px] text-center py-4">
+              <p className="text-[1.1875rem] leading-[1.3684210526] font-medium">
                 One app for projects, knowledge, conversations, and more. Get
                 more done faster—together.
               </p>
             </div>
-            <div className="">
-              <button className="cta text-base cursor-pointer rounded-lg mx-2 p-2">
+            <div className="space-y-1 flex flex-col items-center justify-between">
+              <button className="cta text-base rounded-lg mx-2 p-2 cursor-pointer ">
                 <strong>Get started. Its FREE!</strong>
                 <ArrowRightAltIcon />
               </button>
-            </div>
-            <div className="text-sm">
+            <div className="text-sm freeForever">
               <p>Free Forever. No Credit Card.</p>
+            </div>
             </div>
           </div>
         </div>
