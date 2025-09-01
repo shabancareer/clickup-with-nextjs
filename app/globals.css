@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 /* @plugin "@midudev/tailwind-animations"; */
 
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -118,7 +117,7 @@
     rgba(var(--color-v3-white)) 89%
   );
   /* --color-button-primary-text: (var(--color-v3-white)); */
-    --color-button-primary-text: var(--color-v3-white);
+  --color-button-primary-text: var(--color-v3-white);
   --color-button-primary-background: linear-gradient(
     263deg,
     rgba(var(--color-v3-pink)) -35%,
@@ -503,11 +502,54 @@ select,
 textarea {
   font: inherit;
 }
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+canvas,
+figure,
+img,
+picture,
+video {
+  display: block;
+}
+
+img,
+video {
+  max-inline-size: 100%;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+.CuHome_mainWrapper__QDbpa {
+  overflow-x: clip;
+  inline-size: 100vw;
+  background-color: #fff;
+}
+@media (max-width: 900px) {
+  .CuHome_mainWrapper__QDbpa {
+    overflow-x: unset;
+  }
+}
+.CuHome_mainContent__xfnhR {
+  overflow: visible;
+  inline-size: 100%;
+  max-inline-size: var(--size-v3-homepage-container);
+  margin: auto;
 }
 .navItems {
   display: flex;
@@ -515,11 +557,11 @@ textarea {
   /* gap: 1; */
   align-items: center;
   border: 1px solid rgba(var(--color-v3-grey-4));
-    border-radius: 14px;
-    background-color: rgba(var(--color-v3-white));
-    box-shadow: 0 4px 6px 0 rgba(67, 46, 134, .04);
-    block-size: 2.875rem;
-    padding: .3125rem;
+  border-radius: 14px;
+  background-color: rgba(var(--color-v3-white));
+  box-shadow: 0 4px 6px 0 rgba(67, 46, 134, 0.04);
+  block-size: 2.875rem;
+  padding: 0.3125rem;
 }
 .themeBg::before {
   /* content: ""; */
@@ -559,7 +601,7 @@ textarea {
     rgb(11, 145, 255) 98.42%,
     rgb(0, 145, 255) 100%
   );
-  opacity: 0.06; 
+  opacity: 0.06;
   /* z-index: 0; */
   /* border-start-start-radius: 14px; */
 }
@@ -613,13 +655,24 @@ textarea {
   /* border-start-start-radius: 14px; */
 }
 
-.cta{
+.cta {
   background: linear-gradient(100deg, #40ddff -6.08%, #7612fa 25.08%, #fa12e3);
   color: #ffff;
   box-sizing: border-box;
-  box-shadow: 0 4px 6px 0 rgba(67, 46, 134, .04);
+  box-shadow: 0 4px 6px 0 rgba(67, 46, 134, 0.04);
 }
-
-
-
-
+.cta:hover {
+  background: linear-gradient(
+    263.31deg,
+    #fa12e3 -35.15%,
+    #7612fa 40.89%,
+    #12d0fa 134.61%
+  );
+  opacity: 1;
+  transition-duration: 0.2s;
+}
+.freeForever {
+  color: #5d5d85;
+  line-height: 20px;
+  /* text-align: center; */
+}
