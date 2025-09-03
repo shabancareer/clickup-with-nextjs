@@ -6,6 +6,9 @@ import ProductDropdown from "./utilizes/productDropdown";
 import SolutionsDropdown from "./utilizes/solutionsDropdown";
 import ResourcesDropdown from "./utilizes/resourcesDropdown";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import CustomCheckboxes from "@/components/checkbox/CustomCheckboxes";
+import Checkbox from '@mui/material/Checkbox';
+
 export default function Home() {
   return (
     <>
@@ -75,11 +78,21 @@ export default function Home() {
                 <strong>Get started. Its FREE!</strong>
                 <ArrowRightAltIcon />
               </button>
-            <div className="text-sm freeForever">
-              <p>Free Forever. No Credit Card.</p>
-            </div>
+              <div className="">
+                <p className="freeForever">Free Forever. No Credit Card.</p>
+              </div>
             </div>
           </div>
+        </div>
+     {/* CheckBox section */}
+        <div className="HeroWorkspaceBuilder_grid__4o06N bg-amber-300">
+          <div
+            className="HeroWorkspaceBuilder_carousel__ldEid"
+            data-testid="hero-workspace-builder--carousel">
+              <CustomCheckboxes />
+            </div>
+          
+            
         </div>
       </main>
     </>
