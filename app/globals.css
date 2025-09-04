@@ -761,3 +761,12 @@ video {
   min-block-size: 474px;
   max-block-size: 474px;
 }
+.checkbox{
+  padding: var(--outer-padding, 10px);
+    border: 1px solid var(--color-v4-primary-background, rgb(var(--color-v3-white)));
+    border-radius: var(--outer-border-radius, 20px);
+    background: var(--color-v4-primary-background, rgba(255, 255, 255, .1));
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+
+}

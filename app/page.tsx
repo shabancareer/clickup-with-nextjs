@@ -7,7 +7,7 @@ import SolutionsDropdown from "./utilizes/solutionsDropdown";
 import ResourcesDropdown from "./utilizes/resourcesDropdown";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import CustomCheckboxes from "@/components/checkbox/CustomCheckboxes";
-import Checkbox from '@mui/material/Checkbox';
+import Checkbox from "@mui/material/Checkbox";
 
 export default function Home() {
   return (
@@ -84,15 +84,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-     {/* CheckBox section */}
-        <div className="HeroWorkspaceBuilder_grid__4o06N bg-amber-300">
+        {/* CheckBox section */}
+        <div className="HeroWorkspaceBuilder_grid__4o06N">
           <div
             className="HeroWorkspaceBuilder_carousel__ldEid"
-            data-testid="hero-workspace-builder--carousel">
-              <CustomCheckboxes />
-            </div>
-          
-            
+            data-testid="hero-workspace-builder--carousel"
+          >
+          </div>
+            <CustomCheckboxes />
         </div>
       </main>
     </>

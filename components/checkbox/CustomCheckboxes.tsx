@@ -62,57 +62,66 @@ const items = [
 ];
 
 export default function CustomCheckboxes() {
+  const [selected, setSelected] = useState<number[]>([]);
   const [active, setActive] = useState<number | null>(null);
 
+  const handleToggle = (id: number) => {
+    setSelected((prev) => {
+      if (prev.includes(id)) {
+        // Remove from selection
+        const newSelection = prev.filter((item) => item !== id);
+        // If it was the last clicked, update last clicked
+        if (active === id) {
+          setActive(
+            newSelection.length > 0
+              ? newSelection[newSelection.length - 1]
+              : null
+          );
+        }
+        return newSelection;
+      } else {
+        // Add to selection
+        setActive(id);
+        return [...prev, id];
+      }
+    });
+  };
+  const currentImg =
+    active !== null ? items.find((i) => i.id === active)?.img : items[0].img;
+
   return (
-    <div className="flex gap-10">
+    <div className="grid grid-cols-2 grid-rows-1 gap-1">
+      {/* Images */}
+      <div className="">
+        <Image
+          width={2160}
+          height={1597}
+          src={currentImg || items[0].img}
+          alt="Selected"
+          className={`rounded-xl shadow-md max-h-[400px] object-cover transition ${
+            active === null ? "blur-sm" : ""
+          }`}
+        />
+      </div>
       {/* Checkboxes */}
-      <div className="grid grid-cols-3 gap-4 w-1/2">
+      <div className="grid grid-cols-3 grid-rows-4 gap-1 checkbox">
         {items.map((item) => (
           <div
             key={item.id}
-            onClick={() => setActive(item.id)}
-            className={`cursor-pointer border rounded-xl p-4 flex items-center justify-center text-center shadow-sm 
+            // onClick={() => setActive(item.id)}
+            onClick={() => handleToggle(item.id)}
+            className={`cursor-pointer border rounded-xl flex items-center justify-center text-center shadow-sm 
               transition ${
-                active === item.id
+                selected.includes(item.id)
                   ? "border-purple-500 bg-purple-50"
                   : "border-gray-300 hover:border-purple-400"
               }`}
           >
-            <span className="font-medium">
-              {item.label}
-              </span>
-              
-             <Checkbox
-  checked={active === item.id}
-  onChange={() => setActive(item.id)}
-/>
+            <span className="font-medium">{item.label}</span>
+
+            <Checkbox checked={selected.includes(item.id)} />
           </div>
         ))}
-      </div>
-
-      {/* Images */}
-      <div className="w-1/2 flex items-center justify-center">
-        {active ? (
-          <>
-            <Image
-              width={2160}
-              height={1597}
-              src={items.find((i) => i.id === active)?.img || items[0].img}
-              alt="Selected"
-              className="rounded-xl shadow-md max-h-[400px] object-cover transition"
-            />
-          </>
-        ) : (
-          <Image
-            width={2160}
-            height={1597}
-            src={items[0].img}
-            alt="Default"
-            loading="eager"
-            className="rounded-xl shadow-md max-h-[400px] object-cover blur-sm"
-          />
-        )}
       </div>
     </div>
   );
