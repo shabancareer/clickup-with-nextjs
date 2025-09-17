@@ -1,5 +1,4 @@
 import Image from "next/image";
-import logo from "../public/assets/logo.svg";
 import styles from "./page.module.css";
 import Link from "next/link";
 import ProductDropdown from "./utilizes/productDropdown";
@@ -7,7 +6,10 @@ import SolutionsDropdown from "./utilizes/solutionsDropdown";
 import ResourcesDropdown from "./utilizes/resourcesDropdown";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import CustomCheckboxes from "@/components/checkbox/CustomCheckboxes";
-import Checkbox from "@mui/material/Checkbox";
+import LogoSection from "@/components/logoSection/LogoSection";
+import logo from "../public/assets/logo.svg";
+
+
 
 export default function Home() {
   return (
@@ -51,12 +53,8 @@ export default function Home() {
             </span>
             <span
               className="font-extrabold cta rounded-lg mx-2 p-2
-           backgroundColor: `rgb(var(--color-button-tertiary-background))`,
-          "
-            >
-              <div>
-                <button className=" text-sm cursor-pointer">Sing Up</button>
-              </div>
+           backgroundColor: `rgb(var(--color-button-tertiary-background))`">
+              <button className=" text-sm cursor-pointer">Sing Up</button>
             </span>
           </div>
         </div>
@@ -165,7 +163,10 @@ export default function Home() {
               </defs>
             </svg>
           </div>
-      <CustomCheckboxes />
+          <CustomCheckboxes />
+        </div>
+        <div>
+      <LogoSection />
         </div>
       </main>
     </>

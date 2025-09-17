@@ -6,7 +6,7 @@ import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBullet
 import { Label } from "@radix-ui/react-dropdown-menu";
 import { Icon } from "lucide-react";
 import StarIcon from "../ui/staricon";
-import Chat from "../ui/chat";
+import Chat from "../ui/Chat";
 import TimeTracking from "../ui/TimeTracking";
 import Tasks from "../ui/Tasks";
 import Calendar from "../ui/Calendar";
@@ -238,14 +238,13 @@ export default function CustomCheckboxes() {
                     key={item.id}
                     onClick={() => handleToggle(item.id)}
                   >
-                   
                     <span className="grid grid-cols-1 gap-1 m-1">
                       <span className="flex justify-center items-center">
                         <item.Icon />
                       </span>
                       <span className="font-medium">{item.label}</span>
                     </span>
-                     <span  className="relative left-2 bottom-6">
+                    <span className="relative left-2 bottom-6">
                       <Checkbox checked={selected.includes(item.id)} />
                     </span>
                   </button>
@@ -254,14 +253,10 @@ export default function CustomCheckboxes() {
             </div>
 
             <div
-              className="ShinyButton_wrapper__qb9BL HeroWorkspaceBuilder_checkboxButton__8KaXJ"
-              style={{ "--hover-shine-x": "-43%" } as React.CSSProperties}
+              className="cta w-full mx-auto my-2.5"
+              // style={{ "--hover-shine-x": "-43%" } as React.CSSProperties}
             >
-              <div>
-                <button className="ShinyButton_button__GHdEg">
-                  <span>Get started</span>
-                </button>
-              </div>
+              <button className=" mx-auto">Get started</button>
             </div>
           </div>
         </div>
