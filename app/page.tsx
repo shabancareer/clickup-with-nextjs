@@ -7,6 +7,7 @@ import ResourcesDropdown from "./utilizes/resourcesDropdown";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import CustomCheckboxes from "@/components/checkbox/CustomCheckboxes";
 import LogoSection from "@/components/logoSection/LogoSection";
+import BrokenSection from "@/components/brokenSection/BrokenSection";
 import logo from "../public/assets/logo.svg";
 
 
@@ -167,6 +168,9 @@ export default function Home() {
         </div>
         <div>
       <LogoSection />
+        </div>
+        <div>
+<BrokenSection />
         </div>
       </main>
     </>

@@ -301,7 +301,7 @@
   --size-content-lg: var(--size-38);
   --size-content-default: var(--size-14);
   --size-label: var(--size-content-subheading);
-  --size-v3-container: 1050px;
+  --size-v3-container: 1160px;
   --size-v3-homepage-container: var(--size-v3-container);
   --spacing-1: 10px;
   --spacing-2: 20px;
@@ -551,7 +551,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
 
 /*I use my own css where this section is available *,
 :after,
@@ -1057,7 +1056,6 @@ video {
   will-change: box-shadow;
 }
 
-
 .CuJoinTeamsBanner_wrapper__WxUX7 {
   position: relative;
   max-inline-size: var(--size-v3-container);
@@ -1100,7 +1098,7 @@ video {
   list-style: none;
   padding: 0;
   /* margin: 0; */
- width: max-content;
+  width: max-content;
   /* animate the whole list */
   animation: scroll-left 40s linear infinite;
 }
@@ -1132,7 +1130,9 @@ video {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* move left by half so duplicated logos loop */
+    transform: translateX(
+      -50%
+    ); /* move left by half so duplicated logos loop */
   }
 }
 
@@ -1162,4 +1162,21 @@ video {
   }
 }
 
+/* Broken section */
+.CuHomeConvergence_v4Wrapper__EslwC {
+    background: rgba(0,0,0,0)
+}
 
+.CuHomeConvergence_wrapper__7Qlyb {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    align-self: stretch;
+    inline-size: 100vw;
+    -webkit-margin-start: 50%;
+    margin-inline-start:50%;-webkit-margin-after: 120px;
+    margin-block-end:120px;background: #f7f8fd;
+    transform: translate(-50%);
+    padding: 0 var(--spacing-desktop-padding-gutter)
+}

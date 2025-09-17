@@ -15,11 +15,8 @@ import zillow from "../../public/homePageAssets/logos/zillow.svg";
 
 const LogoSection = () => {
   return (
-    <div id="logo">
-      <div
-        className="CuJoinTeamsBanner_wrapper__WxUX7 HeroWorkspaceBuilder_trustedBy__YAon2 v4"
-        style={{ ["--numLogos" as any]: "11" }}
-      >
+    <div id="logo" >
+      <div className="CuJoinTeamsBanner_wrapper__WxUX7 HeroWorkspaceBuilder_trustedBy__YAon2 v4 pt-4">
         <div className="CuMarkdown_wrapper__0ea92 CuJoinTeamsBanner_joinTeamsHeader__xKvYk v4">
           <p className="text-sm">Trusted by the world’s leading businesses</p>
         </div>
