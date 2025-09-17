@@ -301,7 +301,7 @@
   --size-content-lg: var(--size-38);
   --size-content-default: var(--size-14);
   --size-label: var(--size-content-subheading);
-  --size-v3-container: 1160px;
+  --size-v3-container: 1050px;
   --size-v3-homepage-container: var(--size-v3-container);
   --spacing-1: 10px;
   --spacing-2: 20px;
@@ -552,7 +552,8 @@ body {
   }
 }
 
-*,
+
+/*I use my own css where this section is available *,
 :after,
 :before {
   transition-duration: 0.01ms !important;
@@ -560,7 +561,7 @@ body {
   animation-iteration-count: 1 !important;
   scroll-behavior: auto !important;
   box-sizing: border-box;
-}
+} */
 
 a {
   color: inherit;
@@ -1055,6 +1056,8 @@ video {
   isolation: isolate;
   will-change: box-shadow;
 }
+
+
 .CuJoinTeamsBanner_wrapper__WxUX7 {
   position: relative;
   max-inline-size: var(--size-v3-container);
@@ -1069,13 +1072,6 @@ video {
 .HeroWorkspaceBuilder_trustedBy__YAon2 {
   -webkit-margin-before: 80px !important;
   margin-block-start: 80px !important;
-}
-
-@media (max-width: 1100px) {
-  .HeroWorkspaceBuilder_trustedBy__YAon2 {
-    -webkit-margin-start: calc(-1 * var(--spacing-desktop-padding-gutter));
-    margin-inline-start: calc(-1 * var(--spacing-desktop-padding-gutter));
-  }
 }
 
 .HeroWorkspaceBuilder_trustedBy__YAon2 .paragraph-md {
@@ -1103,8 +1099,8 @@ video {
   gap: 2rem;
   list-style: none;
   padding: 0;
-  margin: 0;
-
+  /* margin: 0; */
+ width: max-content;
   /* animate the whole list */
   animation: scroll-left 40s linear infinite;
 }
@@ -1123,26 +1119,47 @@ video {
   animation-duration: calc(var(--duration) * 1s);
   animation-play-state: running;
 }
-@media (max-width: 1100px) {
-  .CuJoinTeamsBanner_logoList__SUYOO {
-    inline-size: 100vw;
-  }
-}
+
 .CuJoinTeamsBanner_logoList__SUYOO:hover
   .CuJoinTeamsBanner_logoListItem__krzmR {
   animation-play-state: paused;
 }
+
+/* ✅ Define the animation */
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* move left by half so duplicated logos loop */
+  }
+}
+
+@keyframes CuJoinTeamsBanner_moveLogos__bXClU {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media (min-width: 900px) {
   .CuJoinTeamsBanner_logoList__SUYOO .CuJoinTeamsBanner_logoListItem__krzmR {
     animation-duration: calc(var(--numLogos) * 4s);
   }
 }
-/* ✅ Define the animation */
-@keyframes CuJoinTeamsBanner_moveLogos__bXClU {
-  0% {
-    transform: translateX(0); /* start off right */
-  }
-  100% {
-    transform: translateX(-50%); /* move off left */
+@media (max-width: 1100px) {
+  .CuJoinTeamsBanner_logoList__SUYOO {
+    inline-size: 100vw;
   }
 }
+@media (max-width: 1100px) {
+  .HeroWorkspaceBuilder_trustedBy__YAon2 {
+    -webkit-margin-start: calc(-1 * var(--spacing-desktop-padding-gutter));
+    margin-inline-start: calc(-1 * var(--spacing-desktop-padding-gutter));
+  }
+}
+
+
