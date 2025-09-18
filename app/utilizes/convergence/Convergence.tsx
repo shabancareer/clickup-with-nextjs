@@ -1,11 +1,25 @@
-import React from 'react'
+import React from "react";
 
 const Convergence = () => {
   return (
-    <video src="../../../public/videos/CONVERGENCE_08_GIF_DARKMODE_1mbps_V01.mp4" height="776" width="857" loop muted autoPlay >
+    <div className="CuAnimation_wrapper__TLGdj cu-animation"
+    style={
+    {
+      "--aspect-x": 857,
+      "--aspect-y": 776,
+    } as React.CSSProperties
+  }
+    >
+      <video
+        src="/videos/CONVERGENCE_08_GIF_DARKMODE_1mbps_V01.mp4"
+        height="776"
+        width="857"
+        loop
+        muted
+        autoPlay
+      ></video>
+    </div>
+  );
+};
 
-    </video>
-  )
-}
-
-export default Convergence
+export default Convergence;

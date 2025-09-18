@@ -1,40 +1,42 @@
 import React from "react";
-import Convergence from "@/app/utilizes/convergence/convergence";
+import Convergence from "@/app/utilizes/convergence/Convergence";
+import BrokenVideo from "@/app/utilizes/convergence/BrokenVideo";
 
 const BrokenSection = () => {
   return (
     <div className="CuHomeConvergence_wrapper__7Qlyb CuHomeConvergence_v4Wrapper__EslwC v4">
-      <div>
-        <div>
-          <div>
-            <div>
-              <h2>Work is broken.</h2>
+      <div className="CuHomeConvergence_innerWrapper__2RIL7">
+        <div className="CuHomeConvergence_cardContainer__o997M">
+          <div className="CuHomeConvergence_card__6_kE8 CuHomeConvergence_brokenCard__mvBMW">
+            <div className="CuHomeConvergence_cardContent__pc1aQ">
+              <h2 className="CuHomeConvergence_title__7Ak16 heading-md">
+                Work is broken.
+              </h2>
+              <div className="CuMarkdown_wrapper__0ea92 CuHomeConvergence_description__Nj0_R">
+                <p className="paragraph">
+                  App-switching fragments work, steals time, and kills
+                  productivity.
+                </p>
+              </div>
             </div>
             <div>
-              <div>
-                <video
-                  src="../../public/videos/CONVERGENCE_08_GIF_DARKMODE_1mbps_V01.mp4"
-                  height="776"
-                  width="857"
-                  loop
-                  muted
-                  autoPlay
-                />
-              </div>
+              <BrokenVideo />
             </div>
           </div>
         </div>
-        <div>
-          <h2>Let's fix it.</h2>
-          <div>
+        <div className="CuHomeConvergence_fixedCard__O0QfI">
+          <h2 className="CuHomeConvergence_title__7Ak16 heading-md">
+            Let's fix it.
+          </h2>
+          <div className="CuMarkdown_wrapper__0ea92 CuHomeConvergence_description__Nj0_R">
             <p className="paragraph">
               With all your projects, knowledge, and conversations in one app,
               everything just clicks.
             </p>
           </div>
-          <div>
+          <div className="CuHomeConvergence_actionButtonContainer__odSj_">
             <div>
-              <button>
+              <button className="CuButton_button__2XIwY CuButton_buttonMd__jcKmu CuButton_buttonShadow__wF2uA CuButton_v3__5hpJh CuButton_buttonStandard__QN0mF CuHomeConvergence_actionButton__Mm18D rounded-md text-lg">
                 <span>Get started</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -51,28 +53,19 @@ const BrokenSection = () => {
                   />
                 </svg>
               </button>
-              <div>
-                converge over 50+ <br /> different apps
-              </div>
             </div>
-            <div>
-              <button>
-                <span>
-                  <div>
-                    <div>
-                      <video
-                        src="../../public/videos/CONVERGENCE_08_GIF_DARKMODE_1mbps_V01.mp4"
-                        height="776"
-                        width="857"
-                        loop
-                        muted
-                        autoPlay
-                      />
-                    </div>
-                  </div>
-                </span>
-              </button>
+            <div className="CuHomeConvergence_actionButtonDescription__u5F45">
+              converge over 50+ <br /> different apps
             </div>
+          </div>
+          <div>
+            <button className="CuButton_button__2XIwY CuButton_buttonShadow__wF2uA CuHomeConvergence_letsFixItButton__gnGUB">
+              <span>
+                <div>
+                  <Convergence />
+                </div>
+              </span>
+            </button>
           </div>
         </div>
       </div>
