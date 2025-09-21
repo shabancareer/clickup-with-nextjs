@@ -1,0 +1,12 @@
+.workspace{
+    /* background-color: blueviolet; */
+    max-inline-size: var(--size-v3-container);
+margin: auto;
+}
+.title-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: brown; */
+}

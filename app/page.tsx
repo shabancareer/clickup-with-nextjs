@@ -8,6 +8,7 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import CustomCheckboxes from "@/components/checkbox/CustomCheckboxes";
 import LogoSection from "@/components/logoSection/LogoSection";
 import BrokenSection from "@/components/brokenSection/BrokenSection";
+import TheWorkspace from "@/components/theWorkspace/theWorkspace";
 import logo from "../public/assets/logo.svg";
 
 
@@ -15,8 +16,8 @@ import logo from "../public/assets/logo.svg";
 export default function Home() {
   return (
     <>
-      <nav className="grid grid-cols-3 justify-around mx-auto ">
-        <div className=" navItems mx-auto">
+      <nav className="sticky top-0 z-1 grid grid-cols-3 justify-around mx-auto">
+        <div className="navItems mx-auto">
           <Link href="/" className="flex items-center gap-2 w-55">
             <Image
               src={logo}
@@ -171,6 +172,9 @@ export default function Home() {
         </div>
         <div>
 <BrokenSection />
+        </div>
+        <div className="CuCollapsibleTabs_wrapper__hPnl7 v4 CuHomeTestParent_collapsibleTabs__kQy2W">
+          <TheWorkspace />
         </div>
       </main>
     </>

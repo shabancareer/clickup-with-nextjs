@@ -8,7 +8,7 @@ const BrokenSection = () => {
       <div className="CuHomeConvergence_innerWrapper__2RIL7">
         <div className="CuHomeConvergence_cardContainer__o997M">
           <div className="CuHomeConvergence_card__6_kE8 CuHomeConvergence_brokenCard__mvBMW">
-            <div className="CuHomeConvergence_cardContent__pc1aQ">
+            <div className=" CuHomeConvergence_cardContent__pc1aQ">
               <h2 className="CuHomeConvergence_title__7Ak16 heading-md">
                 Work is broken.
               </h2>
@@ -24,18 +24,17 @@ const BrokenSection = () => {
             </div>
           </div>
         </div>
-        <div className="CuHomeConvergence_fixedCard__O0QfI">
-          <h2 className="CuHomeConvergence_title__7Ak16 heading-md">
-            Let's fix it.
-          </h2>
-          <div className="CuMarkdown_wrapper__0ea92 CuHomeConvergence_description__Nj0_R">
-            <p className="paragraph">
-              With all your projects, knowledge, and conversations in one app,
-              everything just clicks.
-            </p>
-          </div>
-          <div className="CuHomeConvergence_actionButtonContainer__odSj_">
-            <div>
+        <div className="CuHomeConvergence_card__6_kE8 CuHomeConvergence_fixedCard__O0QfI">
+          <div className=" CuHomeConvergence_cardContent__pc1aQ relative top-9 left-14">
+            <h2 className="CuHomeConvergence_title__7Ak16">Let's fix it.</h2>
+            <div className="CuMarkdown_wrapper__0ea92 CuHomeConvergence_description__Nj0_R">
+              <p className="paragraph">
+                With all your projects, knowledge, and conversations in one app,
+                everything just clicks.
+              </p>
+            </div>
+            </div>
+            <div className="CuHomeConvergence_actionButtonContainer__odSj_">
               <button className="CuButton_button__2XIwY CuButton_buttonMd__jcKmu CuButton_buttonShadow__wF2uA CuButton_v3__5hpJh CuButton_buttonStandard__QN0mF CuHomeConvergence_actionButton__Mm18D rounded-md text-lg">
                 <span>Get started</span>
                 <svg
@@ -53,12 +52,10 @@ const BrokenSection = () => {
                   />
                 </svg>
               </button>
-            </div>
             <div className="CuHomeConvergence_actionButtonDescription__u5F45">
               converge over 50+ <br /> different apps
             </div>
-          </div>
-          <div>
+            </div>
             <button className="CuButton_button__2XIwY CuButton_buttonShadow__wF2uA CuHomeConvergence_letsFixItButton__gnGUB">
               <span>
                 <div>
@@ -66,7 +63,6 @@ const BrokenSection = () => {
                 </div>
               </span>
             </button>
-          </div>
         </div>
       </div>
     </div>
