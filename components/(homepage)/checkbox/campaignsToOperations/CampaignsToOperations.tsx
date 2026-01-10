@@ -5,17 +5,17 @@ import Checkbox from "@mui/material/Checkbox";
 import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
 import { Label } from "@radix-ui/react-dropdown-menu";
 import { Icon } from "lucide-react";
-import StarIcon from "../ui/staricon";
-import Chat from "../ui/Chat";
-import TimeTracking from "../ui/TimeTracking";
-import Tasks from "../ui/Tasks";
-import Calendar from "../ui/Calendar";
-import Docs from "../ui/Docs";
-import Goals from "../ui/Goals";
-import Dashboards from "../ui/Dashboards";
-import Whiteboards from "../ui/Whiteboards";
-import Forms from "../ui/Forms";
-import Automations from "../ui/Automations";
+import StarIcon from "../../ui/staricon";
+import Chat from "../../ui/Chat";
+import TimeTracking from "../../ui/TimeTracking";
+import Tasks from "../../ui/Tasks";
+import Calendar from "../../ui/Calendar";
+import Docs from "../../ui/Docs";
+import Goals from "../../ui/Goals";
+import Dashboards from "../../ui/Dashboards";
+import Whiteboards from "../../ui/Whiteboards";
+import Forms from "../../ui/Forms";
+import Automations from "../../ui/Automations";
 
 const items = [
   {
@@ -91,7 +91,7 @@ const items = [
     Icon: Automations,
   },
 ];
-export default function CustomCheckboxes() {
+export default function CampaignsToOperations() {
   const [selected, setSelected] = useState<number[]>([]);
   const [active, setActive] = useState<number | null>(null);
   // console.log("Active Img==", active)

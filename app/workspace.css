@@ -1,12 +1,37 @@
-.workspace{
-    /* background-color: blueviolet; */
-    max-inline-size: var(--size-v3-container);
-margin: auto;
+.workspace {
+  /* background-color: blueviolet; */
+  max-inline-size: var(--size-v3-container);
+  margin: auto;
 }
-.title-wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* background-color: brown; */
+.title-wrapper,
+.heading-wrapper,
+.para-wrapper,.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  /* background-color: brown; */
+}
+.heading-wrapper {
+  padding-top: 20px;
+}
+.para-wrapper {
+  padding-top: 10px;
+}
+.button-wrapper{
+  padding-top: 15px;
+
+}
+.sell-btn{
+    color: rgba(var(--color-v3-white)) !important;
+  padding: var(--spacing-spacing-10, 10px) var(--spacing-spacing-20, 20px);
+  background: var(--colors-Text-Main, #000);
+  border-radius: var(--radius-radius-12);
+
+}
+.v4 .h2,
+.v4.h2 {
+  font-size: 2.625rem;
+  line-height: 1.1428571429;
 }

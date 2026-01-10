@@ -5,11 +5,11 @@ import ProductDropdown from "./utilizes/productDropdown";
 import SolutionsDropdown from "./utilizes/solutionsDropdown";
 import ResourcesDropdown from "./utilizes/resourcesDropdown";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import CustomCheckboxes from "@/components/checkbox/CustomCheckboxes";
-import LogoSection from "@/components/logoSection/LogoSection";
-import BrokenSection from "@/components/brokenSection/BrokenSection";
-import TheWorkspace from "@/components/theWorkspace/theWorkspace";
 import logo from "../public/assets/logo.svg";
+import TheWorkspace from "@/components/(homepage)/theWorkspace/theWorkspace";
+import CustomCheckboxes from "@/components/(homepage)/checkbox/CustomCheckboxes";
+import LogoSection from "@/components/(homepage)/logoSection/LogoSection";
+import BrokenSection from "@/components/(homepage)/brokenSection/BrokenSection";
 
 
 
@@ -174,7 +174,7 @@ export default function Home() {
 <BrokenSection />
         </div>
         <div className="CuCollapsibleTabs_wrapper__hPnl7 v4 CuHomeTestParent_collapsibleTabs__kQy2W">
-          <TheWorkspace />
+          {/* <TheWorkspace /> */}
         </div>
       </main>
     </>

@@ -17,6 +17,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Divider from "@mui/material/Divider";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Image from "next/image";
+// import brain from "../../assets/brain.svg";
 import brain from "../../public/assets/brain.svg";
 import search from "../../public/assets/search.svg";
 import agent from "../../public/assets/agent.svg";
