@@ -1,16 +1,18 @@
 import Image from "next/image";
 import React from "react";
-// import logitech from "/homePageAssets/logos/logitech.svg";
-import american from "../../public/homePageAssets/logos/american.svg";
-import atandt from "../../public/homePageAssets/logos/atandt.svg";
-import cartoon from "../../public/homePageAssets/logos/cartoon.svg";
-import chick from "../../public/homePageAssets/logos/chick.svg";
-import datadog from "../../public/homePageAssets/logos/datadog.svg";
-import paramount from "../../public/homePageAssets/logos/paramount.svg";
-import sephora from "../../public/homePageAssets/logos/sephora.svg";
-import siemens from "../../public/homePageAssets/logos/siemens.svg";
-import wayfair from "../../public/homePageAssets/logos/wayfair.svg";
-import zillow from "../../public/homePageAssets/logos/zillow.svg";
+
+import logitech from "@/public/homePageAssets/logos/logitech.svg";
+import american from "@/public/homePageAssets/logos/american.svg";
+import atandt from "@/public/homePageAssets/logos/atandt.svg";
+import cartoon from "@/public/homePageAssets/logos/cartoon.svg";
+import chick from "@/public/homePageAssets/logos/chick.svg";
+import datadog from "@/public/homePageAssets/logos/datadog.svg";
+import paramount from "@/public/homePageAssets/logos/paramount.svg";
+import sephora from "@/public/homePageAssets/logos/sephora.svg";  
+import siemens from "@/public/homePageAssets/logos/siemens.svg";  
+import wayfair from "@/public/homePageAssets/logos/wayfair.svg";
+import zillow from "@/public/homePageAssets/logos/zillow.svg";
+
 
 
 const LogoSection = () => {
@@ -24,7 +26,7 @@ const LogoSection = () => {
           <ul className="CuJoinTeamsBanner_logoList__SUYOO">
             {/* original logos */}
             <li className="CuJoinTeamsBanner_logoListItem__krzmR">
-              <Image src="/homePageAssets/logos/logitech.svg" alt="Logitech" width="100" height="16" />
+              <Image src={logitech} alt="Logitech" width="100" height="16" />
             </li>
             <li className="CuJoinTeamsBanner_logoListItem__krzmR">
               <Image src={american} alt="American" width="100" height="16" />

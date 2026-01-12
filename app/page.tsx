@@ -10,6 +10,7 @@ import TheWorkspace from "@/components/(homepage)/theWorkspace/theWorkspace";
 import CustomCheckboxes from "@/components/(homepage)/checkbox/CustomCheckboxes";
 import LogoSection from "@/components/(homepage)/logoSection/LogoSection";
 import BrokenSection from "@/components/(homepage)/brokenSection/BrokenSection";
+import Allapp from "@/components/(homepage)/allApps/Allapp";
 
 
 
@@ -30,6 +31,7 @@ export default function Home() {
               The everything app, for work.
             </span>
           </Link>
+          
         </div>
         <div className="navItems justify-around w-2xl relative right-36">
           <ProductDropdown />
@@ -73,6 +75,7 @@ export default function Home() {
                 more done faster—together.
               </p>
             </div>
+             
             <div className="space-y-1 flex flex-col items-center justify-between">
               <button className="cta text-base rounded-lg mx-2 p-2 cursor-pointer ">
                 <strong>Get started. Its FREE!</strong>
@@ -174,7 +177,10 @@ export default function Home() {
 <BrokenSection />
         </div>
         <div className="CuCollapsibleTabs_wrapper__hPnl7 v4 CuHomeTestParent_collapsibleTabs__kQy2W">
-          {/* <TheWorkspace /> */}
+          <TheWorkspace />
+        </div>
+        <div>
+          <Allapp />
         </div>
       </main>
     </>

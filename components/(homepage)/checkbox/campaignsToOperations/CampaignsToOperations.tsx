@@ -5,17 +5,19 @@ import Checkbox from "@mui/material/Checkbox";
 import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
 import { Label } from "@radix-ui/react-dropdown-menu";
 import { Icon } from "lucide-react";
-import StarIcon from "../../ui/staricon";
-import Chat from "../../ui/Chat";
-import TimeTracking from "../../ui/TimeTracking";
-import Tasks from "../../ui/Tasks";
-import Calendar from "../../ui/Calendar";
-import Docs from "../../ui/Docs";
-import Goals from "../../ui/Goals";
-import Dashboards from "../../ui/Dashboards";
-import Whiteboards from "../../ui/Whiteboards";
-import Forms from "../../ui/Forms";
-import Automations from "../../ui/Automations";
+// import StarIcon from "../../../ui/staricon";
+import StarIcon from "@/components/ui/staricon";
+import Chat from "@/components/ui/Chat";
+import TimeTracking from "@/components/ui/TimeTracking";
+import Tasks from "@/components/ui/Tasks";
+import Calendar from "@/components/ui/Calendar";
+import Docs from "@/components/ui/Docs";
+import Goals from "@/components/ui/Goals";
+import Dashboards from "@/components/ui/Dashboards";
+import Whiteboards from "@/components/ui/Whiteboards";
+import Forms from "@/components/ui/Forms";
+import Automations from "@/components/ui/Automations";
+
 
 const items = [
   {
@@ -137,9 +139,8 @@ export default function CampaignsToOperations() {
             height={1597}
             src={currentImg || items[0].img}
             alt="Selected"
-            className={`HeroWorkspaceBuilder_carouselImage__caaM1 rounded-xl shadow-md max-h-[400px] object-cover transition ${
-              active === null ? "blur-sm" : ""
-            }`}
+            className={`HeroWorkspaceBuilder_carouselImage__caaM1 rounded-xl shadow-md max-h-[400px] object-cover transition ${active === null ? "blur-sm" : ""
+              }`}
           />
         </div>
       </div>
@@ -230,11 +231,10 @@ export default function CampaignsToOperations() {
                     data-testid="checkbox"
                     data-active={selected.includes(item.id)}
                     data-hovered="false"
-                    className={`cursor-pointer Checkbox_checkbox__ZyW3J transition ${
-                      selected.includes(item.id)
+                    className={`cursor-pointer Checkbox_checkbox__ZyW3J transition ${selected.includes(item.id)
                         ? "border-purple-500 bg-purple-50"
                         : "border-gray-300 hover:border-purple-400"
-                    }`}
+                      }`}
                     key={item.id}
                     onClick={() => handleToggle(item.id)}
                   >
@@ -251,10 +251,9 @@ export default function CampaignsToOperations() {
                 ))}
               </div>
             </div>
-
             <div
               className="cta w-full mx-auto my-2.5"
-              // style={{ "--hover-shine-x": "-43%" } as React.CSSProperties}
+            // style={{ "--hover-shine-x": "-43%" } as React.CSSProperties}
             >
               <button className=" mx-auto">Get started</button>
             </div>
