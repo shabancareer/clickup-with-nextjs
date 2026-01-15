@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-
+import { ReactQueryClientProvider } from "./providers/ReactQueryProvider";
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-plus-jakarta-sans" });
 <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -27,8 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={jakarta.variable}>
-      <body>{children}</body>
-    </html>
+    <ReactQueryClientProvider>
+      <html lang="en" className={jakarta.variable}>
+        <body>{children}</body>
+      </html>
+    </ReactQueryClientProvider>
   );
 }

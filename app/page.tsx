@@ -31,7 +31,7 @@ export default function Home() {
               The everything app, for work.
             </span>
           </Link>
-          
+
         </div>
         <div className="navItems justify-around w-2xl relative right-36">
           <ProductDropdown />
@@ -50,7 +50,7 @@ export default function Home() {
           <div className="navItems">
             <span>
               <div className="mx-auto hover:bg-gray-100 p-2 rounded-sm">
-                <Link href="" className="cursor-pointer">
+                <Link href="/login" className="cursor-pointer">
                   Login
                 </Link>
               </div>
@@ -58,7 +58,9 @@ export default function Home() {
             <span
               className="font-extrabold cta rounded-lg mx-2 p-2
            backgroundColor: `rgb(var(--color-button-tertiary-background))`">
-              <button className=" text-sm cursor-pointer">Sing Up</button>
+              {/* <button className=" text-sm cursor-pointer">Sing Up</button> */}
+              <Link href="/signup" className="text-sm cursor-pointer">Sing Up</Link>
+
             </span>
           </div>
         </div>
@@ -75,7 +77,7 @@ export default function Home() {
                 more done faster—together.
               </p>
             </div>
-             
+
             <div className="space-y-1 flex flex-col items-center justify-between">
               <button className="cta text-base rounded-lg mx-2 p-2 cursor-pointer ">
                 <strong>Get started. Its FREE!</strong>
@@ -171,10 +173,10 @@ export default function Home() {
           <CustomCheckboxes />
         </div>
         <div>
-      <LogoSection />
+          <LogoSection />
         </div>
         <div>
-<BrokenSection />
+          <BrokenSection />
         </div>
         <div className="CuCollapsibleTabs_wrapper__hPnl7 v4 CuHomeTestParent_collapsibleTabs__kQy2W">
           <TheWorkspace />

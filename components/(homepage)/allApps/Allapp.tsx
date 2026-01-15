@@ -102,19 +102,18 @@ const Allapp = () => {
           </p>
         </div>
       </div>
-      <div className=" border border-gray-600 rounded w-full">
-        <div className="grid grid-cols-10 mt-1 w-full  ">
+      <div className="bg-white">
+        {/* <div className="bg-yellow-500 absolute right-10 h-full w-30">right</div> */}
+        <div className="grid grid-cols-10 mt-1 w-full">
           {gridItems.map((item, index) => {
             if (!item) return null; // Skip consumed items
-
             const isLarge = item.size === "large";
-
             return (
               <div
                 key={item.id}
                 className={`
                  rounded cursor-pointer transition-all duration-200
-    border-1 border-gray-200 hover:border-gray-400 hover:shadow-sm
+    border-1 border-gray-200 opacity-60 hover:border-gray-400 hover:shadow-sm
     flex flex-col items-center justify-center text-center p-2
     ${isLarge ? "col-span-2 row-span-2 w-full h-full" : "aspect-square"}
               `}
