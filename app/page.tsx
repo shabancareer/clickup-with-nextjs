@@ -59,7 +59,7 @@ export default function Home() {
               className="font-extrabold cta rounded-lg mx-2 p-2
            backgroundColor: `rgb(var(--color-button-tertiary-background))`">
               {/* <button className=" text-sm cursor-pointer">Sing Up</button> */}
-              <Link href="/signup" className="text-sm cursor-pointer">Sing Up</Link>
+              <Link href="/register" className="text-sm cursor-pointer">Sing Up</Link>
 
             </span>
           </div>
