@@ -50,7 +50,7 @@ export default function ResourcesDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="hover:bg-gray-100">
+        <Button className="bg-transparent hover:bg-gray-100">
           Resources
           <ExpandMoreIcon />
         </Button>
@@ -249,38 +249,38 @@ export default function ResourcesDropdown() {
         </DropdownMenuGroup>
         <DropdownMenuGroup className="flex flex-col h-auto">
           <div className="flex flex-col flex-1">
-             <DropdownMenuLabel className="aiRightDropdown flex pt-2 ml-1">
-            <StarIcon />
-            <span className="ml-1 text-black">NEW</span>
-          </DropdownMenuLabel>
-          <DropdownMenuItem className="flex-col aiFeatures">
-            <div >
-              <h4 className="font-bold">Talk to Text</h4>
-            </div>
-            <div className="flex-1 flex flex-col justify-between pt-14">
-            <p className="overflow-x-auto tracking-wide">
-              Instantly convert your voice to text, across any <br />desktop app, doc,
-              or site. 
-            </p>
-            <span className="pt-6 font-bold text-gray-500 text-sm leading-6">
-            <Link href="">
-            Learn More <ArrowRightAltIcon />
-            </Link>
-            </span> 
-            </div>
-          </DropdownMenuItem>
+            <DropdownMenuLabel className="aiRightDropdown flex pt-2 ml-1">
+              <StarIcon />
+              <span className="ml-1 text-black">NEW</span>
+            </DropdownMenuLabel>
+            <DropdownMenuItem className="flex-col aiFeatures">
+              <div >
+                <h4 className="font-bold">Talk to Text</h4>
+              </div>
+              <div className="flex-1 flex flex-col justify-between pt-14">
+                <p className="overflow-x-auto tracking-wide">
+                  Instantly convert your voice to text, across any <br />desktop app, doc,
+                  or site.
+                </p>
+                <span className="pt-6 font-bold text-gray-500 text-sm leading-6">
+                  <Link href="">
+                    Learn More <ArrowRightAltIcon />
+                  </Link>
+                </span>
+              </div>
+            </DropdownMenuItem>
           </div>
-         
+
           <div className="grid grid-cols-2 flex-1 border-t-2">
             <DropdownMenuItem className="border-r flex flex-col items-center justify-center">
               <AllFeaturesIcons />
               <span>All Features</span> </DropdownMenuItem>
             <DropdownMenuItem className="flex flex-col items-center justify-center">
               <Integrations />
-             <span>Integrations</span> </DropdownMenuItem>
+              <span>Integrations</span> </DropdownMenuItem>
             <DropdownMenuItem className="border-r border-t flex flex-col items-center justify-center">
               <WatchDemo />
-             <span>Watch demo</span> </DropdownMenuItem>
+              <span>Watch demo</span> </DropdownMenuItem>
             <DropdownMenuItem className="border-t flex flex-col items-center justify-center">
               <Downloads />
               <span>Downloads</span> </DropdownMenuItem>

@@ -45,7 +45,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     }
 
     // Extract custom props to prevent passing them to DOM
-    const { isLoading: _, ...restProps } = props
+    // const { isLoading: _, ...restProps } = props
 
     return (
       <button
@@ -59,7 +59,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           (disabled || isLoading) && 'cursor-not-allowed opacity-70',
           className
         )}
-        {...restProps}
+        {...props}
       >
         {isLoading && (
           <svg

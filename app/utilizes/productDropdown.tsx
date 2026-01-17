@@ -12,7 +12,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
 } from "../../components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Divider from "@mui/material/Divider";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -42,14 +42,13 @@ import AllFeaturesIcons from "@/components/ui/AllFeaturesIcons";
 import Integrations from "@/components/ui/Integrations";
 import WatchDemo from "@/components/ui/WatchDemo";
 import Downloads from "@/components/ui/Downloads";
-
-// import "./globals.css";
+// import "../../app/globals.css";
 
 export default function ProductDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="hover:bg-gray-100">
+        <Button className="bg-transparent hover:bg-gray-100">
           Product
           <ExpandMoreIcon />
         </Button>
