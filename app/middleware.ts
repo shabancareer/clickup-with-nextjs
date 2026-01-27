@@ -1,12 +1,13 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { TokenService } from '@/app/lib/auth/tokens'
 
-const publicRoutes = ['/login', '/register', '/']
-const protectedRoutes = ['/dashboard', '/profile', '/settings']
+// Define public and protected routes
+const publicRoutes = ['/login', '/register', '/', '/api/auth/login', '/api/auth/register']
+const protectedRoutes = ['/dashboard', '/profile', '/settings', '/api/protected']
 
 export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl
-    const accessToken = request.cookies.get('access-token')?.value
 
     // Check if route is protected
     const isProtectedRoute = protectedRoutes.some(route =>
@@ -18,16 +19,33 @@ export function middleware(request: NextRequest) {
         pathname === route || pathname.startsWith(route + '/')
     )
 
+    // Get session token
+    const token = request.cookies.get('session-token')?.value
+
     // Redirect to login if accessing protected route without token
-    if (isProtectedRoute && !accessToken) {
+    if (isProtectedRoute && !token) {
         const loginUrl = new URL('/login', request.url)
         loginUrl.searchParams.set('redirect', pathname)
         return NextResponse.redirect(loginUrl)
     }
 
-    // Redirect to dashboard if accessing public route with token
-    if (isPublicRoute && accessToken && pathname !== '/') {
-        return NextResponse.redirect(new URL('/dashboard', request.url))
+    // Verify token for protected routes
+    if (isProtectedRoute && token) {
+        const payload = TokenService.verifyToken(token)
+        if (!payload) {
+            const response = NextResponse.redirect(new URL('/login', request.url))
+            response.cookies.delete('session-token')
+            response.cookies.delete('refresh-token')
+            return response
+        }
+    }
+
+    // Redirect to dashboard if accessing public auth route with valid token
+    if ((pathname === '/login' || pathname === '/register') && token) {
+        const payload = TokenService.verifyToken(token)
+        if (payload) {
+            return NextResponse.redirect(new URL('/dashboard', request.url))
+        }
     }
 
     return NextResponse.next()
@@ -37,11 +55,11 @@ export const config = {
     matcher: [
         /*
          * Match all request paths except for the ones starting with:
-         * - api (API routes)
          * - _next/static (static files)
          * - _next/image (image optimization files)
          * - favicon.ico (favicon file)
+         * - public folder
          */
-        '/((?!api|_next/static|_next/image|favicon.ico).*)',
+        '/((?!_next/static|_next/image|favicon.ico|public).*)',
     ],
 }
